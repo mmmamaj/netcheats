@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070b">
+  <title>NET Cheats — Downloads</title>
+  <style>
+    :root{
+      --bg:#05070b;
+      --panel:#0b0f16;
+      --panel2:#101722;
+      --blue:#009dff;
+      --blue2:#006eff;
+      --text:#f4f7fb;
+      --muted:#8f9bad;
+      --border:rgba(0,157,255,.22);
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      min-height:100vh;
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(0,157,255,.16), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(0,110,255,.12), transparent 28%),
+        linear-gradient(135deg,#030509 0%,#070b12 55%,#020408 100%);
+    }
+
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(3,5,9,.78);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .nav{
+      height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.5px}
+    .brand img{width:46px;height:46px;border-radius:12px;object-fit:cover;border:1px solid var(--border)}
+    .brand span{font-size:19px}
+    .brand b{color:var(--blue)}
+
+    nav{display:flex;gap:24px}
+    nav a{color:#aeb7c5;font-size:14px;font-weight:700;transition:.2s}
+    nav a:hover{color:#fff}
+
+    .hero{padding:42px 0 28px}
+    .hero-box{
+      overflow:hidden;position:relative;min-height:310px;
+      border:1px solid var(--border);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      background:#080b11;
+    }
+    .hero-box::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(90deg,rgba(2,4,8,.94) 0%,rgba(2,4,8,.60) 46%,rgba(2,4,8,.12) 100%);
+    }
+    .hero-banner{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;
+    }
+    .hero-content{position:relative;z-index:2;max-width:620px;padding:58px 48px}
+    .tag{
+      display:inline-flex;padding:7px 12px;border-radius:999px;
+      background:rgba(0,157,255,.12);border:1px solid rgba(0,157,255,.35);
+      color:#55bdff;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;
+      margin-bottom:17px;
+    }
+    h1{font-size:clamp(38px,6vw,68px);line-height:.95;text-transform:uppercase}
+    h1 span{color:var(--blue)}
+    .hero p{margin-top:18px;color:#b7c0ce;line-height:1.7;max-width:520px}
+
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 18px;border-radius:12px;font-weight:800;font-size:14px;
+      border:1px solid rgba(0,157,255,.35);transition:.2s;
+    }
+    .btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 8px 25px rgba(0,110,255,.25)}
+    .btn-secondary{background:rgba(255,255,255,.04);color:#d9e1eb}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+
+    .section{padding:26px 0 70px}
+    .section-top{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}
+    .section h2{font-size:26px}
+    .section-top p{color:var(--muted);font-size:14px;margin-top:6px}
+
+    .downloads{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .card{
+      background:linear-gradient(180deg,rgba(16,23,34,.92),rgba(8,12,18,.96));
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:18px;padding:20px;
+      box-shadow:0 12px 35px rgba(0,0,0,.25);
+      transition:.25s;
+    }
+    .card:hover{transform:translateY(-4px);border-color:rgba(0,157,255,.42);box-shadow:0 18px 45px rgba(0,100,255,.12)}
+    .icon{
+      width:48px;height:48px;display:grid;place-items:center;
+      border-radius:14px;background:rgba(0,157,255,.10);
+      border:1px solid rgba(0,157,255,.22);font-size:22px;margin-bottom:16px;
+    }
+    .card h3{font-size:18px;margin-bottom:8px}
+    .card p{font-size:13px;color:var(--muted);line-height:1.55;min-height:42px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+    .pill{font-size:11px;color:#a9b7c8;background:#0b111a;border:1px solid rgba(255,255,255,.07);padding:5px 8px;border-radius:7px}
+    .download{
+      width:100%;display:flex;align-items:center;justify-content:center;gap:8px;
+      padding:11px;border-radius:10px;background:rgba(0,157,255,.10);
+      color:#58c0ff;border:1px solid rgba(0,157,255,.28);font-weight:800;font-size:13px;
+    }
+    .download:hover{background:rgba(0,157,255,.18);color:#fff}
+
+    .empty{
+      grid-column:1/-1;text-align:center;padding:45px 20px;
+      color:var(--muted);border:1px dashed rgba(0,157,255,.25);border-radius:18px;
+    }
+
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:25px 0;color:#687386;font-size:12px;text-align:center}
+
+    @media(max-width:850px){
+      .downloads{grid-template-columns:repeat(2,1fr)}
+      .hero-content{padding:45px 30px}
+    }
+    @media(max-width:580px){
+      .nav{height:68px}
+      nav{display:none}
+      .brand img{width:40px;height:40px}
+      .hero{padding-top:20px}
+      .hero-box{min-height:390px}
+      .hero-content{padding:40px 24px}
+      .downloads{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img src="assets/logo.gif" alt="NET Cheats">
+      <span>NET <b>Cheats</b></span>
+    </a>
+    <nav>
+      <a href="#downloads">Downloads</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div class="hero-box">
+      <img class="hero-banner" src="assets/banner.gif" alt="">
+      <div class="hero-content">
+        <span class="tag">Central de Downloads</span>
+        <h1>NET <span>Cheats</span></h1>
+        <p>Baixe seus arquivos de forma rápida e organizada. Coloque seus programas, arquivos e atualizações aqui.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#downloads">↓ Ver downloads</a>
+          <a class="btn btn-secondary" href="#sobre">Sobre o site</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="downloads">
+    <div class="section-top">
+      <div>
+        <h2>Downloads</h2>
+        <p>Selecione um arquivo para iniciar o download.</p>
+      </div>
+    </div>
+
+    <div class="downloads">
+
+      <!-- DUPLIQUE ESTE CARD PARA ADICIONAR MAIS DOWNLOADS -->
+      <article class="card">
+        <div class="icon">📦</div>
+        <h3>Seu primeiro arquivo</h3>
+        <p>Substitua este texto pela descrição do seu arquivo.</p>
+        <div class="meta">
+          <span class="pill">ZIP</span>
+          <span class="pill">v1.0</span>
+        </div>
+        <!-- Coloque o arquivo dentro da pasta downloads e altere o nome abaixo -->
+        <a class="download" href="downloads/arquivo.zip" download>↓ Baixar arquivo</a>
+      </article>
+
+      <article class="card">
+        <div class="icon">⚡</div>
+        <h3>Atualização</h3>
+        <p>Espaço para uma nova versão ou atualização do seu conteúdo.</p>
+        <div class="meta">
+          <span class="pill">APK</span>
+          <span class="pill">v2.0</span>
+        </div>
+        <a class="download" href="downloads/atualizacao.apk" download>↓ Baixar arquivo</a>
+      </article>
+
+      <article class="card">
+        <div class="icon">🛠️</div>
+        <h3>Ferramenta</h3>
+        <p>Adicione aqui outra ferramenta ou arquivo disponibilizado por você.</p>
+        <div class="meta">
+          <span class="pill">EXE</span>
+          <span class="pill">Windows</span>
+        </div>
+        <a class="download" href="downloads/ferramenta.exe" download>↓ Baixar arquivo</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section container" id="sobre" style="padding-top:0">
+    <div class="card">
+      <h2 style="margin-bottom:8px">Sobre a NET Cheats</h2>
+      <p style="color:var(--muted);line-height:1.7">
+        Central oficial para organizar e disponibilizar seus downloads.
+        O visual foi baseado nas cores preta, branca e azul da identidade visual enviada.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 NET Cheats — Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
